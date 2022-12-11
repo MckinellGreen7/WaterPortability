@@ -16,7 +16,7 @@ st.set_page_config(page_title="Hydr8", page_icon=":tada:", layout= "wide")
 #from PIL import Image
 #image = Image.open(r"C:\Users\hp\Desktop\Water-Potability\photo1.png")
 #i#mage2 = Image.open(r"C:\Users\hp\Desktop\Water-Potability\photo2.png")
-#header = st.container()
+header = st.container()
 STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
 print(STREAMLIT_STATIC_PATH/"Untitled-1.css")
 from PIL import Image
