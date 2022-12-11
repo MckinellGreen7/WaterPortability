@@ -116,7 +116,7 @@ with dataset:
     st.header("Water Potability Dataset")
     st.text("I found this data set on Kaggle")
     
-    df=pd.read_csv(r"C:\Users\hp\Desktop\Water-Potability\water-potability11.csv")
+    df=pd.read_csv(current_dir/"water-potability11.csv")
     st.write(df.head())
     
     st.subheader("Potability of Water")
