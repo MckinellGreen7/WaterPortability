@@ -35,12 +35,13 @@ def load_lottieurl(url):
         return None
     return r.json()
 lottie_coding = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_q5qeoo3q.json")
-
+current_dir = pathlib.Path(__file__).parent if "__file__" in locals() else Path.cwd()
+print(current_dir)
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 #local_css(r"C:\Users\hp\Desktop\Water-Potability\Untitled-1.css")
-local_css(STREAMLIT_STATIC_PATH/"Untitled-1.css")
+local_css(current_dir/"Untitled-1.css")
 
 
     #original_script = '<p style=" text-align: center; font-family:Lato; font-size: 18px; font-weight: Bold; border-width:3px; border-style:solid; border-color:#FF0000; padding: 1em;">   In this project we will find out whether the water is potable or not.</p>'
