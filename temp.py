@@ -1,24 +1,21 @@
 import streamlit as st
 import pandas as pd
-import pathlib
-#import matplotlib.pyplot as plt 
-#import numpy as np
+import matplotlib.pyplot as plt 
+import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, cross_val_score
-#from sklearn.metrics import confusion_matrix, classification_report
-#from sklearn.metrics import precision_score, recall_score,f1_score
-#from sklearn.metrics import plot_roc_curve
+from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.metrics import precision_score, recall_score,f1_score
+from sklearn.metrics import plot_roc_curve
 from streamlit_lottie import st_lottie
 import requests
 import PIL.Image
 st.set_page_config(page_title="Hydr8", page_icon=":tada:", layout= "wide")
 
-#from PIL import Image
-#image = Image.open(r"C:\Users\hp\Desktop\Water-Potability\photo1.png")
-#i#mage2 = Image.open(r"C:\Users\hp\Desktop\Water-Potability\photo2.png")
-#header = st.container()
-STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
-print(STREAMLIT_STATIC_PATH/"Untitled-1.css")
+from PIL import Image
+image = Image.open("C:\\Users\\Lenovo\\Desktop\\Streamlit Project\\hydr8.png")
+image2 = Image.open("C:\\Users\\Lenovo\\Desktop\\Streamlit Project\\Data\\22hydr8.png")
+header = st.container()
 from PIL import Image
 with st.container():
     left_column, right_column = st.columns(2)
@@ -26,8 +23,8 @@ with st.container():
         st.write('##')
         original_title = '<p style=" text-align: left; background: linear-gradient(to right, #a8c0ff, #3f2b96);color:transparent;background-clip:text;-webkit-background-clip: text; font-weight: Bold; font-size: 70px;" class = "heading">HYDR8</p>'
         st.markdown(original_title, unsafe_allow_html=True)
-    #with right_column:
-        #st.image(image2, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    with right_column:
+        st.image(image2, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 def load_lottieurl(url):
     r = requests.get(url)
     if r.status_code !=200:
@@ -38,8 +35,8 @@ lottie_coding = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_q5
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-#local_css(r"C:\Users\hp\Desktop\Water-Potability\Untitled-1.css")
-local_css(STREAMLIT_STATIC_PATH/"Untitled-1.css")
+local_css("C:\\Users\\Lenovo\\Desktop\\Streamlit Project\\css\\code.css")
+
 
 
     #original_script = '<p style=" text-align: center; font-family:Lato; font-size: 18px; font-weight: Bold; border-width:3px; border-style:solid; border-color:#FF0000; padding: 1em;">   In this project we will find out whether the water is potable or not.</p>'
@@ -114,7 +111,7 @@ with dataset:
     st.header("Water Potability Dataset")
     st.text("I found this data set on Kaggle")
     
-    df=pd.read_csv(r"C:\Users\hp\Desktop\Water-Potability\water-potability11.csv")
+    df=pd.read_csv(r"C:\Users\Lenovo\Desktop\Streamlit Project\water-potability11.csv")
     st.write(df.head())
     
     st.subheader("Potability of Water")
