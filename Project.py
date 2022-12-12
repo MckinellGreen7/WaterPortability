@@ -35,7 +35,7 @@ def load_lottieurl(url):
         return None
     return r.json()
 lottie_coding = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_q5qeoo3q.json")
-current_dir = pathlib.Path(__file__).parent if "__file__" in locals() else Path.cwd()
+current_dir = pathlib.Path(__file__).parent if "__file__" in locals() else pathlib.Path.cwd()
 print(current_dir)
 def local_css(file_name):
     with open(file_name) as f:
@@ -216,7 +216,7 @@ with st.container():
     st.header("Want to collaborate with our projects in Future!\nThen get in Touch with us ")
     st.write("##")
     contact_form = '''
-    <form action="https://formsubmit.co/shivamanik593@gmail.com" method="POST">
+    <form action="https://formsubmit.co/mckinellgreen7@gmail.com" method="POST">
         <input type ="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder = "Your name" required>
         <input type="email" name="email" placeholder = "Your mail_id" required>
