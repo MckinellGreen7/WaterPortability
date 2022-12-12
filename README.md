@@ -1,7 +1,7 @@
 
 # Water Potability Prediction Using Machine Learning
 
-“Hydr8” is a machine learning model project that works to predict if water content to be predicted is portable or not. It can be used by anyone who wants to know whether the water they are drinking is potable or not.
+“Hydr8” is a machine learning model that predicts whether the givem water sample is potable or not. It can be used by anyone who wants to know whether the water they are drinking is potable or not.
 
 ## Technologies
 
